@@ -14,8 +14,6 @@
 		210E93942521881A00B0F83D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 210E93922521881A00B0F83D /* Main.storyboard */; };
 		210E93962521881D00B0F83D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 210E93952521881D00B0F83D /* Assets.xcassets */; };
 		210E93992521881D00B0F83D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 210E93972521881D00B0F83D /* LaunchScreen.storyboard */; };
-		210E93A42521881D00B0F83D /* AXSwiftKitExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210E93A32521881D00B0F83D /* AXSwiftKitExampleTests.swift */; };
-		210E93AF2521881D00B0F83D /* AXSwiftKitExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210E93AE2521881D00B0F83D /* AXSwiftKitExampleUITests.swift */; };
 		33F1D81300517A3E9E17013C /* Pods_AXSwiftKitExample_AXSwiftKitExampleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03400E23B68A9F6679228C94 /* Pods_AXSwiftKitExample_AXSwiftKitExampleUITests.framework */; };
 		9B8C9A1AADD52424DD7DEBE8 /* Pods_AXSwiftKitExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17D00FDD9B3A3956D0D0870D /* Pods_AXSwiftKitExample.framework */; };
 /* End PBXBuildFile section */
@@ -50,11 +48,7 @@
 		210E93982521881D00B0F83D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		210E939A2521881D00B0F83D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		210E939F2521881D00B0F83D /* AXSwiftKitExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AXSwiftKitExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		210E93A32521881D00B0F83D /* AXSwiftKitExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AXSwiftKitExampleTests.swift; sourceTree = "<group>"; };
-		210E93A52521881D00B0F83D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		210E93AA2521881D00B0F83D /* AXSwiftKitExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AXSwiftKitExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		210E93AE2521881D00B0F83D /* AXSwiftKitExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AXSwiftKitExampleUITests.swift; sourceTree = "<group>"; };
-		210E93B02521881D00B0F83D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		36A1BE39D985B4449628CB66 /* Pods-AXSwiftKitExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AXSwiftKitExample.debug.xcconfig"; path = "Target Support Files/Pods-AXSwiftKitExample/Pods-AXSwiftKitExample.debug.xcconfig"; sourceTree = "<group>"; };
 		4797BE9A62ADD859A574D935 /* Pods-AXSwiftKitExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AXSwiftKitExample.release.xcconfig"; path = "Target Support Files/Pods-AXSwiftKitExample/Pods-AXSwiftKitExample.release.xcconfig"; sourceTree = "<group>"; };
 		61DC873786D590D3F4D76E56 /* Pods_AXSwiftKitExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AXSwiftKitExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,8 +89,6 @@
 			isa = PBXGroup;
 			children = (
 				210E938B2521881A00B0F83D /* AXSwiftKitExample */,
-				210E93A22521881D00B0F83D /* AXSwiftKitExampleTests */,
-				210E93AD2521881D00B0F83D /* AXSwiftKitExampleUITests */,
 				A597C2D978059659D2101853 /* Frameworks */,
 				64724EBD0999B8205BEA8FB4 /* Pods */,
 				210E938A2521881A00B0F83D /* Products */,
@@ -125,24 +117,6 @@
 				210E939A2521881D00B0F83D /* Info.plist */,
 			);
 			path = AXSwiftKitExample;
-			sourceTree = "<group>";
-		};
-		210E93A22521881D00B0F83D /* AXSwiftKitExampleTests */ = {
-			isa = PBXGroup;
-			children = (
-				210E93A32521881D00B0F83D /* AXSwiftKitExampleTests.swift */,
-				210E93A52521881D00B0F83D /* Info.plist */,
-			);
-			path = AXSwiftKitExampleTests;
-			sourceTree = "<group>";
-		};
-		210E93AD2521881D00B0F83D /* AXSwiftKitExampleUITests */ = {
-			isa = PBXGroup;
-			children = (
-				210E93AE2521881D00B0F83D /* AXSwiftKitExampleUITests.swift */,
-				210E93B02521881D00B0F83D /* Info.plist */,
-			);
-			path = AXSwiftKitExampleUITests;
 			sourceTree = "<group>";
 		};
 		64724EBD0999B8205BEA8FB4 /* Pods */ = {
@@ -416,7 +390,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				210E93A42521881D00B0F83D /* AXSwiftKitExampleTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,7 +397,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				210E93AF2521881D00B0F83D /* AXSwiftKitExampleUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

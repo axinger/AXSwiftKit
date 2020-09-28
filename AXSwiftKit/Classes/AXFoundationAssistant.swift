@@ -12,7 +12,7 @@ public func AXPrint<T>(_ message: T, filePath: String = #file, function:String =
     
     #if DEBUG
     let fileName = (filePath as NSString).lastPathComponent.replacingOccurrences(of: ".swift", with: "")
-    print("😂[ "+fileName + " " + function + "第\(rowCount)行 ] " + "\(message)")
+    print("😂[ "+fileName + " " + function + " 第\(rowCount)行 ] " + "\(message)")
     #endif
     //    #else
     //

@@ -1,0 +1,3 @@
+${PODS_ROOT}/Target Support Files/Pods-AXSwiftKitExample/Pods-AXSwiftKitExample-frameworks.sh
+${BUILT_PRODUCTS_DIR}/AXSwiftKit/AXSwiftKit.framework
+${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework

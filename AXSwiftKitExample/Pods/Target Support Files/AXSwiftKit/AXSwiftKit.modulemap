@@ -1,0 +1,6 @@
+framework module AXSwiftKit {
+  umbrella header "AXSwiftKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

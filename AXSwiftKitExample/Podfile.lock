@@ -1,0 +1,23 @@
+PODS:
+  - Alamofire (4.9.1)
+  - AXSwiftKit (0.0.1)
+
+DEPENDENCIES:
+  - Alamofire
+  - AXSwiftKit (from `../`)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Alamofire
+
+EXTERNAL SOURCES:
+  AXSwiftKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  AXSwiftKit: 2ec94fe9fe973247959b3eb6bc18b1ba69377840
+
+PODFILE CHECKSUM: d54c7d4d24403b9ebf248a50f7c72357fc17a12f
+
+COCOAPODS: 1.9.3

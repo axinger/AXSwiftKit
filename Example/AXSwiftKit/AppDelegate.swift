@@ -16,7 +16,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+//        adapterIOS11()
         return true
+    }
+  
+    //  Converted to Swift 5.3 by Swiftify v5.3.19197 - https://swiftify.com/
+    func adapterIOS11() {
+        // 适配iOS11以上UITableview 、UICollectionView、UIScrollview 列表/页面偏移
+        if #available(iOS 11.0, *) {
+            UIScrollView.appearance().contentInsetAdjustmentBehavior = UIScrollView.ContentInsetAdjustmentBehavior.never
+
+            UITableView.appearance().estimatedRowHeight = 0
+            UITableView.appearance().estimatedSectionFooterHeight = 0
+            UITableView.appearance().estimatedSectionHeaderHeight = 0
+            
+            
+        }
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

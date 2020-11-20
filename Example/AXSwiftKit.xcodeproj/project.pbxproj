@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		13F32AB9506097463E0EE4F8 /* Pods_AXSwiftKit_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82FEDE4A7BF11EFDEFF78A6B /* Pods_AXSwiftKit_Example.framework */; };
 		215E436525674D34002D68C6 /* pch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215E436425674D34002D68C6 /* pch.swift */; };
+		2189F8592567ADC30067A3D7 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2189F8582567ADC30067A3D7 /* UserInfo.swift */; };
+		2189F85F2567AECA0067A3D7 /* _01ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2189F85E2567AECA0067A3D7 /* _01ContentViewController.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -30,6 +32,8 @@
 /* Begin PBXFileReference section */
 		09E278C9A0F3406319F6E7D2 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		215E436425674D34002D68C6 /* pch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pch.swift; sourceTree = "<group>"; };
+		2189F8582567ADC30067A3D7 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		2189F85E2567AECA0067A3D7 /* _01ContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _01ContentViewController.swift; sourceTree = "<group>"; };
 		5366D14909F31C636A1BC4EA /* AXSwiftKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = AXSwiftKit.podspec; path = ../AXSwiftKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		607FACD01AFB9204008FA782 /* AXSwiftKit_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AXSwiftKit_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -66,6 +70,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2189F8552567AD9D0067A3D7 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				2189F85E2567AECA0067A3D7 /* _01ContentViewController.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		2189F8572567ADB50067A3D7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2189F8582567ADC30067A3D7 /* UserInfo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		551C64AAA371EB3AC8E94AC7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +118,8 @@
 		607FACD21AFB9204008FA782 /* Example for AXSwiftKit */ = {
 			isa = PBXGroup;
 			children = (
+				2189F8572567ADB50067A3D7 /* Model */,
+				2189F8552567AD9D0067A3D7 /* Classes */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				215E436425674D34002D68C6 /* pch.swift */,
@@ -314,8 +336,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2189F8592567ADC30067A3D7 /* UserInfo.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				2189F85F2567AECA0067A3D7 /* _01ContentViewController.swift in Sources */,
 				215E436525674D34002D68C6 /* pch.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

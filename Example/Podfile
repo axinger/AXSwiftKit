@@ -1,0 +1,18 @@
+platform :ios, '10.0'
+use_frameworks!
+
+target 'AXSwiftKit_Example' do
+  pod 'AXSwiftKit', :path => '../'
+  # 网络请求AFN swift版本
+  pod 'Alamofire'
+  
+  pod 'SnapKit', '~> 5.0.0'
+  
+  pod 'ReactiveSwift', '~> 6.1'
+  
+  # JSON 连续取值
+  pod 'SwiftyJSON', '~> 4.0'
+  # json > model
+  pod 'ObjectMapper'
+  
+end

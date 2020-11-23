@@ -28,6 +28,8 @@ class _01ContentViewController: UIViewController {
         }
     }()
     
+    var hand: ((_ make: Int) -> Void)?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "01Content"

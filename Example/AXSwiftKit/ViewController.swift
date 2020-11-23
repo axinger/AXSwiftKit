@@ -10,12 +10,13 @@ import UIKit
 import AXSwiftKit
 
 
-typealias ActionHandler = (_ index:Int) -> Void
+//typealias ActionHandler = (_ index:Int) -> Void
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var actionHandler : ActionHandler?
+    //    var actionHandler : ActionHandler?
     
+    var actionHandler: ((_ index: Int) -> Void)?
     
     lazy var tableView: UITableView = {
         
@@ -45,16 +46,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(tableView)
-//        tableView.snp.makeConstraints { (make) in
-//            make.edges.equalTo(UIEdgeInsets.zero)
-//            make.top.equalToSuperview().offset(100)
-//        }
+        //        tableView.snp.makeConstraints { (make) in
+        //            make.edges.equalTo(UIEdgeInsets.zero)
+        //            make.top.equalToSuperview().offset(100)
+        //        }
         
         tableView.snp.remakeConstraints { (make) in
             make.left.right.bottom.equalToSuperview()
-                      make.top.equalToSuperview().offset(100)
+            make.top.equalToSuperview().offset(100)
             
-                   }
+        }
     }
     
     
@@ -67,15 +68,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellID", for: indexPath)
         cell.accessoryType = .disclosureIndicator
         
-//        cell.textLabel?.text =  String(format: dataArray[indexPath.row]["title"] as! CVarArg)
-
+        //        cell.textLabel?.text =  String(format: dataArray[indexPath.row]["title"] as! CVarArg)
+        
         cell.textLabel?.text =  String(format: "%d %@",dataArray[indexPath.row]["index"] as! Int , dataArray[indexPath.row]["title"] as! String)
         
         return cell;
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let action : ActionHandler = dataArray[indexPath.row]["action"] as! ActionHandler
+        let action = dataArray[indexPath.row]["action"] as! (Int) -> Void
         action(indexPath.row)
     }
 }

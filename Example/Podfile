@@ -9,6 +9,7 @@ target 'AXSwiftKit_Example' do
   pod 'SnapKit', '~> 5.0.0'
   
   pod 'ReactiveSwift', '~> 6.1'
+  pod 'ReactiveCocoa', '~> 10.1'
   
   # JSON 连续取值
   pod 'SwiftyJSON', '~> 4.0'

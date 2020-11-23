@@ -2,6 +2,8 @@ PODS:
   - Alamofire (4.9.1)
   - AXSwiftKit (0.1.0)
   - ObjectMapper (4.2.0)
+  - ReactiveCocoa (10.3.0):
+    - ReactiveSwift (~> 6.2)
   - ReactiveSwift (6.5.0)
   - SnapKit (5.0.1)
   - SwiftyJSON (4.3.0)
@@ -10,6 +12,7 @@ DEPENDENCIES:
   - Alamofire
   - AXSwiftKit (from `../`)
   - ObjectMapper
+  - ReactiveCocoa (~> 10.1)
   - ReactiveSwift (~> 6.1)
   - SnapKit (~> 5.0.0)
   - SwiftyJSON (~> 4.0)
@@ -18,6 +21,7 @@ SPEC REPOS:
   trunk:
     - Alamofire
     - ObjectMapper
+    - ReactiveCocoa
     - ReactiveSwift
     - SnapKit
     - SwiftyJSON
@@ -30,10 +34,11 @@ SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   AXSwiftKit: 9796197fae97e8d95bca34369b0f13bc3dbfeec8
   ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
+  ReactiveCocoa: 083ae559e6f588ce519cab412ea119b431c26a24
   ReactiveSwift: 8d159904084e908856cde90b2e28823f3c7e485f
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
 
-PODFILE CHECKSUM: 8c06264b8272f1acac8195af6ea26a2233d33521
+PODFILE CHECKSUM: bbcd0456f7eb2bb77897c05b9f28a9a8cf866549
 
 COCOAPODS: 1.10.0

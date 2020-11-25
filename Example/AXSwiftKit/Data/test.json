@@ -1,0 +1,24 @@
+[
+    {
+        "name": "jim",
+        "age": 10,
+        "students":[
+            {
+                "nick_name": "student1",
+                "nick_age": 11
+            },
+            {
+                "name": "student2",
+                "age": 11
+            }
+        ],
+        "dog":{
+            "name": "dog1",
+            "age": 2
+        }
+    },
+    {
+        "name": "tom",
+        "age": 11
+    }
+]

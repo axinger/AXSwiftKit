@@ -29,28 +29,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tempTableView.register(UITableViewCell.self, forCellReuseIdentifier: "cellID")
         return tempTableView
     }()
-    
-    
-    lazy var dataArray : [[String:Any]] = [
-        
-        [
-            "index": 1,
-            "title": "ContentViewController",
-            "action": {(index : Int)->Void in
-                let vc = _01ContentViewController.init()
-                self.navigationController?.pushViewController(vc, animated: true)
-            },
-        ]
-        
-    ]
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Home"
         view.addSubview(tableView)
-        //        tableView.snp.makeConstraints { (make) in
-        //            make.edges.equalTo(UIEdgeInsets.zero)
-        //            make.top.equalToSuperview().offset(100)
-        //        }
-        
         tableView.snp.remakeConstraints { (make) in
             make.left.right.bottom.equalToSuperview()
             make.top.equalToSuperview().offset(100)
@@ -75,9 +57,30 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return cell;
     }
     
+    // FIXME: 需要修改bug的相关说明
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let action = dataArray[indexPath.row]["action"] as! (Int) -> Void
         action(indexPath.row)
     }
+    
+    
+    // TODO AAAA
+    func test() -> Void {
+        
+    }
+
+    // MARK: - 说明文字,带分割线
+    lazy var dataArray : [[String:Any]] = [
+        
+        [
+            "index": 1,
+            "title": "ContentViewController",
+            "action": {(index : Int)->Void in
+                let vc = _01ContentViewController.init()
+                self.navigationController?.pushViewController(vc, animated: true)
+            },
+        ]
+        
+    ]
 }
 

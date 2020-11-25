@@ -9,7 +9,7 @@
 import Foundation
 import SnapKit
 import AXSwiftKit
-
+import SwiftyJSON
 import ReactiveSwift
 import ReactiveCocoa
 

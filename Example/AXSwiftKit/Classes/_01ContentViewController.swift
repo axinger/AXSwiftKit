@@ -42,9 +42,10 @@ class _01ContentViewController: UIViewController {
         containerView.snp.makeConstraints { make in
             make.width.height.equalTo(scrollView)
         }
-        
+        /// _ 参数
         lastBottom = _test01(lastBottom)
-        lastBottom = _test02(lastBottom)
+        /// 没有 _ 参数,需要形参
+        lastBottom = _test02(lastBottom:lastBottom)
         lastBottom = _test03(lastBottom)
         lastBottom = _test04(lastBottom)
         
@@ -94,7 +95,7 @@ class _01ContentViewController: UIViewController {
         }
     }
     
-    func _test02(_ lastBottom: SnapKit.ConstraintItem) -> SnapKit.ConstraintItem {
+    func _test02(lastBottom: SnapKit.ConstraintItem) -> SnapKit.ConstraintItem {
         var lastBottom = lastBottom
         
         lastBottom = _p00ButtonTopView(lastBottom, title: "按钮2") {

@@ -196,4 +196,14 @@ class _01ContentViewController: UIViewController {
             
         }
     }
+    
+    func test_same(_ name : String, _ age : Int) -> Void {
+        
+    }
+    func test_same(_ name : String) -> Void {
+        
+    }
+    func test_same(_ age : Int) -> Void {
+        
+    }
 }

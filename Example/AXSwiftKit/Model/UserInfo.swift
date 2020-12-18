@@ -7,15 +7,53 @@
 //
 
 import UIKit
+/// Codable 属性用? 避免json中无字段,而奔溃
+class UserInfo: Codable {
+    
+    enum Sex: Int, Codable {
+        case male = 1
+        case female = 2
+        case other
+    }
 
-
-class UserInfo:Codable {
+    
     ///支持懒加载, 线程安全
-    static let shared = UserInfo()
+//    static let shared = UserInfo(name:"空", age: 0, sex: .other)
+    static let shared: UserInfo = UserInfo()
+    var name:String?
+    var age :Int?
+    /// 区分关键字
+    var `switch`: Bool? = false
+    
+    var sex : Sex = .other
+    private init() {
+    }
+    
+    
+//    private init(name: String,age: Int, sex: Sex) {
+//        self.name = name;
+//        self.age = age;
+//        self.sex = sex;
+//    }
+    
+    static func destroy() {
+        
+
+    }
+    class func destroy2() {
+        
+
+    }
+}
+
+
+struct UserInfoStruct:Codable {
+    ///支持懒加载, 线程安全
+    static let shared = UserInfoStruct()
 
     var name:String?
     var age :Int?
-    private init() {}
+    
 
 //    override func copy() -> Any {
 //        return self // UserInfoClass.shared

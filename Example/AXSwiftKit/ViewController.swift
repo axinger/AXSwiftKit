@@ -79,7 +79,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 let vc = _01ContentViewController.init()
                 self.navigationController?.pushViewController(vc, animated: true)
             },
-        ]
+        ],
         
     ]
 }

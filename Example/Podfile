@@ -20,6 +20,9 @@ target 'AXSwiftKit_Example' do
   # json > model
   pod 'ObjectMapper'
   
+  # 测试工具
+  pod 'MLeaksFinder'
+  pod 'LookinServer', :configurations => ['Debug']
 end
 
 post_install do |installer|

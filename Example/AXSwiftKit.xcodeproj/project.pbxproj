@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		13F32AB9506097463E0EE4F8 /* Pods_AXSwiftKit_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82FEDE4A7BF11EFDEFF78A6B /* Pods_AXSwiftKit_Example.framework */; };
+		2142A6882589D6E3002AA531 /* _00BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2142A6872589D6E3002AA531 /* _00BaseViewController.swift */; };
 		21562523256E2E520010BAD8 /* test.json in Resources */ = {isa = PBXBuildFile; fileRef = 21562522256E2E520010BAD8 /* test.json */; };
 		2156252F256E347A0010BAD8 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2156252E256E347A0010BAD8 /* Person.swift */; };
 		215E436525674D34002D68C6 /* pch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215E436425674D34002D68C6 /* pch.swift */; };
 		2189F8592567ADC30067A3D7 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2189F8582567ADC30067A3D7 /* UserInfo.swift */; };
 		2189F85F2567AECA0067A3D7 /* _01ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2189F85E2567AECA0067A3D7 /* _01ContentViewController.swift */; };
+		21EA1AC5258B3D1E007A14C4 /* _02View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EA1AC4258B3D1E007A14C4 /* _02View.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -33,11 +35,13 @@
 
 /* Begin PBXFileReference section */
 		09E278C9A0F3406319F6E7D2 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		2142A6872589D6E3002AA531 /* _00BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _00BaseViewController.swift; sourceTree = "<group>"; };
 		21562522256E2E520010BAD8 /* test.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = test.json; sourceTree = "<group>"; };
 		2156252E256E347A0010BAD8 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		215E436425674D34002D68C6 /* pch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pch.swift; sourceTree = "<group>"; };
 		2189F8582567ADC30067A3D7 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		2189F85E2567AECA0067A3D7 /* _01ContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _01ContentViewController.swift; sourceTree = "<group>"; };
+		21EA1AC4258B3D1E007A14C4 /* _02View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _02View.swift; sourceTree = "<group>"; };
 		5366D14909F31C636A1BC4EA /* AXSwiftKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = AXSwiftKit.podspec; path = ../AXSwiftKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		607FACD01AFB9204008FA782 /* AXSwiftKit_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AXSwiftKit_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -85,7 +89,9 @@
 		2189F8552567AD9D0067A3D7 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				2142A6872589D6E3002AA531 /* _00BaseViewController.swift */,
 				2189F85E2567AECA0067A3D7 /* _01ContentViewController.swift */,
+				21EA1AC4258B3D1E007A14C4 /* _02View.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -303,6 +309,9 @@
 				"${PODS_ROOT}/Target Support Files/Pods-AXSwiftKit_Example/Pods-AXSwiftKit_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AXSwiftKit/AXSwiftKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/FBRetainCycleDetector/FBRetainCycleDetector.framework",
+				"${PODS_ROOT}/LookinServer/LookinServer.framework",
+				"${BUILT_PRODUCTS_DIR}/MLeaksFinder/MLeaksFinder.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactiveCocoa/ReactiveCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactiveSwift/ReactiveSwift.framework",
@@ -313,6 +322,9 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AXSwiftKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBRetainCycleDetector.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LookinServer.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MLeaksFinder.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveSwift.framework",
@@ -356,6 +368,8 @@
 				2156252F256E347A0010BAD8 /* Person.swift in Sources */,
 				2189F8592567ADC30067A3D7 /* UserInfo.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				2142A6882589D6E3002AA531 /* _00BaseViewController.swift in Sources */,
+				21EA1AC5258B3D1E007A14C4 /* _02View.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				2189F85F2567AECA0067A3D7 /* _01ContentViewController.swift in Sources */,
 				215E436525674D34002D68C6 /* pch.swift in Sources */,

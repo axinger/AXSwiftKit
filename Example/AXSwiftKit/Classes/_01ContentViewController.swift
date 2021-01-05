@@ -10,7 +10,7 @@
 
 import UIKit
 import SwiftyJSON
-
+import os
 class PersonClass: Equatable {
     static func == (lhs: PersonClass, rhs: PersonClass) -> Bool {
         return lhs.name1 == rhs.name1 && lhs.name2 == rhs.name2
@@ -90,6 +90,7 @@ class _01ContentViewController: _00BaseViewController {
         /// 没有 _ 参数,需要形参
         _test02()
         _test03()
+        _test03_1()
         _test04()
         
         
@@ -160,7 +161,11 @@ class _01ContentViewController: _00BaseViewController {
             /// struct可直接在构造函数中初始化property
             /// class不可直接在构造函数中初始化property
             var p21 = PersonStruct(name1: "jim")
+            /// 初始化
             var p211 = PersonStruct(name1: "jim",name2: "tom")
+            /// 初始化
+            var p212 = PersonStruct(name2: "tom")
+            
             p21.name1 = "n21"
             
             let p22 = p21
@@ -214,6 +219,26 @@ class _01ContentViewController: _00BaseViewController {
             print("six times three is \(threeTimesTable[3])") // 打印“six times three is 18”
             
         }
+        
+        _p00Button(title: "log") {
+            
+            // 2. 创建Logger实例
+            if #available(iOS 14.0, *) {
+                let logger = Logger()
+                
+                // 3. 使用log函数
+                logger.log(level: .debug, "test")
+                logger.log(level: .info, "test")
+                logger.log(level: .default, "test")
+                logger.log(level: .error, "test")
+                logger.log(level: .fault, "test")
+            } 
+
+            
+        }
+        
+       
+        
         
         containerView.snp.makeConstraints { make in
             make.bottom.equalTo(lastBottom)
@@ -318,6 +343,39 @@ class _01ContentViewController: _00BaseViewController {
                 print("QR code: \(productCode).")
             }
             // 打印“QR code: ABCDEFGHIJKLMNOP.”
+        }
+    }
+    
+    func _test03_1() -> Void{
+        
+        _p00Button(title: "枚举-关联值") {
+            
+            enum Score {
+                case points(Int)
+                case grade(Character)
+            }
+
+            var score = Score.points(96)
+            score = .grade("A")
+
+            switch score {
+            case let .points(i):
+                print(i, "Points")
+            case let .grade(i):
+                print(i, "grade")
+            }
+            
+            
+//            guard let number = Int("123A") else {
+//                print("字符串转换整数失败")
+////                return;
+//            }
+//            print("字符串转换整数成功: \(number)")
+            
+
+            let number2 = Int("123A");
+            
+            print("字符串转换整数成功: \(number2 ?? 0)")
         }
     }
     

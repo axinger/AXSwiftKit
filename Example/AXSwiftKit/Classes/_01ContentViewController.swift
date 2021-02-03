@@ -11,6 +11,7 @@
 import UIKit
 import SwiftyJSON
 import os
+import AVKit
 class PersonClass: Equatable {
     static func == (lhs: PersonClass, rhs: PersonClass) -> Bool {
         return lhs.name1 == rhs.name1 && lhs.name2 == rhs.name2
@@ -93,6 +94,14 @@ class _01ContentViewController: _00BaseViewController {
         _test03_1()
         _test04()
         
+        _p00Button(title: "语音") {
+            
+                   let synthsizer = AVSpeechSynthesizer.init()
+                   let utterance = AVSpeechUtterance.init(string: "支付宝到账1000元")
+//                   utterance.voice = AVSpeechSynthesisVoice.init(language: "zh-CN")
+                   utterance.rate = 0.52
+                   synthsizer.speak(utterance)
+        }
         
         _p00Button(title: "转义字符") {
             print("\0 (空字符)")

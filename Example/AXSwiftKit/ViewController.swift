@@ -73,13 +73,26 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     lazy var dataArray : [[String:Any]] = [
         
         [
-            "index": 1,
-            "title": "ContentViewController",
+            "index": 01,
+            "title": "_01ContentViewController",
             "action": {(index : Int)->Void in
                 let vc = _01ContentViewController.init()
                 self.navigationController?.pushViewController(vc, animated: true)
             },
         ],
+        
+        
+        [
+            "index": 03,
+            "title": "_03DBViewController",
+            "action": {(index : Int)->Void in
+                let vc = _03DBViewController.init()
+                self.navigationController?.pushViewController(vc, animated: true)
+            },
+        ],
+        
+        
+        
         
     ]
 }

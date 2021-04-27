@@ -28,6 +28,13 @@ class _00BaseViewController: UIViewController {
     }()
     
     
+    func _lastBottomConstraints() {
+        containerView.snp.makeConstraints { make in
+            make.bottom.equalTo(lastBottom)
+        }
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

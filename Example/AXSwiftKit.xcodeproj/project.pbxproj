@@ -11,6 +11,9 @@
 		2142A6882589D6E3002AA531 /* _00BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2142A6872589D6E3002AA531 /* _00BaseViewController.swift */; };
 		21562523256E2E520010BAD8 /* test.json in Resources */ = {isa = PBXBuildFile; fileRef = 21562522256E2E520010BAD8 /* test.json */; };
 		2156252F256E347A0010BAD8 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2156252E256E347A0010BAD8 /* Person.swift */; };
+		215E1AED2637B8730008037C /* _03DBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215E1AEC2637B8730008037C /* _03DBViewController.swift */; };
+		215E1AF22637B94F0008037C /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215E1AF12637B94F0008037C /* DBManager.swift */; };
+		215E1AF62637B9710008037C /* DBStudent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215E1AF52637B9710008037C /* DBStudent.swift */; };
 		215E436525674D34002D68C6 /* pch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215E436425674D34002D68C6 /* pch.swift */; };
 		2189F8592567ADC30067A3D7 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2189F8582567ADC30067A3D7 /* UserInfo.swift */; };
 		2189F85F2567AECA0067A3D7 /* _01ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2189F85E2567AECA0067A3D7 /* _01ContentViewController.swift */; };
@@ -38,6 +41,9 @@
 		2142A6872589D6E3002AA531 /* _00BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _00BaseViewController.swift; sourceTree = "<group>"; };
 		21562522256E2E520010BAD8 /* test.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = test.json; sourceTree = "<group>"; };
 		2156252E256E347A0010BAD8 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		215E1AEC2637B8730008037C /* _03DBViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _03DBViewController.swift; sourceTree = "<group>"; };
+		215E1AF12637B94F0008037C /* DBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
+		215E1AF52637B9710008037C /* DBStudent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBStudent.swift; sourceTree = "<group>"; };
 		215E436425674D34002D68C6 /* pch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pch.swift; sourceTree = "<group>"; };
 		2189F8582567ADC30067A3D7 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		2189F85E2567AECA0067A3D7 /* _01ContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _01ContentViewController.swift; sourceTree = "<group>"; };
@@ -86,12 +92,22 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
+		215E1AF02637B94F0008037C /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				215E1AF12637B94F0008037C /* DBManager.swift */,
+				215E1AF52637B9710008037C /* DBStudent.swift */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
 		2189F8552567AD9D0067A3D7 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
 				2142A6872589D6E3002AA531 /* _00BaseViewController.swift */,
 				2189F85E2567AECA0067A3D7 /* _01ContentViewController.swift */,
 				21EA1AC4258B3D1E007A14C4 /* _02View.swift */,
+				215E1AEC2637B8730008037C /* _03DBViewController.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -137,6 +153,7 @@
 		607FACD21AFB9204008FA782 /* Example for AXSwiftKit */ = {
 			isa = PBXGroup;
 			children = (
+				215E1AF02637B94F0008037C /* Module */,
 				21562521256E2E390010BAD8 /* Data */,
 				2189F8572567ADB50067A3D7 /* Model */,
 				2189F8552567AD9D0067A3D7 /* Classes */,
@@ -309,6 +326,7 @@
 				"${PODS_ROOT}/Target Support Files/Pods-AXSwiftKit_Example/Pods-AXSwiftKit_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AXSwiftKit/AXSwiftKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/GRDB.swift/GRDB.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactiveCocoa/ReactiveCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactiveSwift/ReactiveSwift.framework",
@@ -319,6 +337,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AXSwiftKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRDB.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveSwift.framework",
@@ -362,11 +381,14 @@
 				2156252F256E347A0010BAD8 /* Person.swift in Sources */,
 				2189F8592567ADC30067A3D7 /* UserInfo.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				215E1AF62637B9710008037C /* DBStudent.swift in Sources */,
 				2142A6882589D6E3002AA531 /* _00BaseViewController.swift in Sources */,
 				21EA1AC5258B3D1E007A14C4 /* _02View.swift in Sources */,
+				215E1AF22637B94F0008037C /* DBManager.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				2189F85F2567AECA0067A3D7 /* _01ContentViewController.swift in Sources */,
 				215E436525674D34002D68C6 /* pch.swift in Sources */,
+				215E1AED2637B8730008037C /* _03DBViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,7 +479,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -507,7 +529,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";

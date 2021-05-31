@@ -27,3 +27,11 @@ axinger, axingrun@outlook.com
 ## License
 
 AXSwiftKit is available under the MIT license. See the LICENSE file for more info.
+
+## 标签
+```
+MARK: 为标签
+TODO: 为待完成任务
+FIXME: 为待修改bug
+冒号后面加 - 则会在标签上面显示分割线
+```

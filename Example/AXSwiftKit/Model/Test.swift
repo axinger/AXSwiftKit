@@ -15,6 +15,15 @@ public final class CIImageKit<Object> {
         self.obj = obj
     }
 }
+
+extension CIImageKit where Object: UIImageView {
+    func setImage(url: URL, placeHolder: UIImage?) {
+        // 实现 下载图片并缓存、展示的逻辑
+        
+        self.obj.image = UIImage.init(named: "")
+    }
+}
+
 // protocol中 需要用 associatedtype 来预设一个类型
 public protocol CIImageDownloaderProtocol {
     associatedtype type
@@ -31,14 +40,6 @@ extension CIImageDownloaderProtocol {
 
 extension UIImageView: CIImageDownloaderProtocol {}
 
-
-extension CIImageKit where Object: UIImageView {
-    func setImage(url: URL, placeHolder: UIImage?) {
-        // 实现 下载图片并缓存、展示的逻辑
-        
-        self.obj.image = UIImage.init(named: "")
-    }
-}
 
 func test1() {
     

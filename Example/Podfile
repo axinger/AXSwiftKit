@@ -13,17 +13,19 @@ target 'AXSwiftKit_Example' do
   
   pod 'ReactiveSwift', '~> 6.1'
   pod 'ReactiveCocoa', '~> 10.1'
-  
+  #RxSwift-拓展RxCocoa
+  pod 'RxSwift', '6.2.0'
+  pod 'RxCocoa', '6.2.0'
   # JSON 连续取值
   pod 'SwiftyJSON', '~> 4.0'
   # json > model
   pod 'ObjectMapper'
   
   # 测试工具
-#  pod 'MLeaksFinder'
-#  pod 'LookinServer', :configurations => ['Debug']
-
-pod 'GRDB.swift', '~> 5.7.4'
+  #  pod 'MLeaksFinder'
+  #  pod 'LookinServer', :configurations => ['Debug']
+  
+  pod 'GRDB.swift', '~> 5.7.4'
 end
 
 post_install do |installer|

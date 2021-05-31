@@ -8,12 +8,18 @@
 //http://www.cocoachina.com/articles/20426
 import UIKit
 
+
+
+
 //protocol + 泛型
 public final class CIImageKit<Object> {
     public let obj: Object
     public init(_ obj: Object) {
         self.obj = obj
     }
+    
+    
+    
 }
 // protocol中 需要用 associatedtype 来预设一个类型
 public protocol CIImageDownloaderProtocol {
@@ -40,7 +46,7 @@ extension CIImageKit where Object: UIImageView {
     }
 }
 
-func test1() {
+func test() {
     
     let image = UIImageView()
     image.ci.setImage(url: URL.init(string: "https://www.manoboo.com")!, placeHolder: nil)

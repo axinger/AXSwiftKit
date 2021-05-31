@@ -8,6 +8,12 @@ PODS:
   - ReactiveCocoa (10.3.0):
     - ReactiveSwift (~> 6.2)
   - ReactiveSwift (6.5.0)
+  - RxCocoa (6.2.0):
+    - RxRelay (= 6.2.0)
+    - RxSwift (= 6.2.0)
+  - RxRelay (6.2.0):
+    - RxSwift (= 6.2.0)
+  - RxSwift (6.2.0)
   - SnapKit (5.0.1)
   - SwiftyJSON (4.3.0)
 
@@ -18,6 +24,8 @@ DEPENDENCIES:
   - ObjectMapper
   - ReactiveCocoa (~> 10.1)
   - ReactiveSwift (~> 6.1)
+  - RxCocoa (= 6.2.0)
+  - RxSwift (= 6.2.0)
   - SnapKit (~> 5.0.0)
   - SwiftyJSON (~> 4.0)
 
@@ -28,6 +36,9 @@ SPEC REPOS:
     - ObjectMapper
     - ReactiveCocoa
     - ReactiveSwift
+    - RxCocoa
+    - RxRelay
+    - RxSwift
     - SnapKit
     - SwiftyJSON
 
@@ -42,9 +53,12 @@ SPEC CHECKSUMS:
   ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
   ReactiveCocoa: 083ae559e6f588ce519cab412ea119b431c26a24
   ReactiveSwift: 8d159904084e908856cde90b2e28823f3c7e485f
+  RxCocoa: 4baf94bb35f2c0ab31bc0cb9f1900155f646ba42
+  RxRelay: e72dbfd157807478401ef1982e1c61c945c94b2f
+  RxSwift: d356ab7bee873611322f134c5f9ef379fa183d8f
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
 
-PODFILE CHECKSUM: 81fb95e50102c183a3dda856da2963d9c354b755
+PODFILE CHECKSUM: b756f25496913200d2483a75528325fc53a7cfef
 
 COCOAPODS: 1.10.1

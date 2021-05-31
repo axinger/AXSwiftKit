@@ -9,41 +9,48 @@
 import UIKit
 
 //protocol + 泛型
-public final class CIImageKit<Object> {
-    public let obj: Object
-    public init(_ obj: Object) {
-        self.obj = obj
+public final class AXIImageKit<AnyOne> {
+    public let one: AnyOne
+    public init(_ one: AnyOne) {
+        self.one = one
     }
 }
-
-extension CIImageKit where Object: UIImageView {
-    func setImage(url: URL, placeHolder: UIImage?) {
-        // 实现 下载图片并缓存、展示的逻辑
-        
-        self.obj.image = UIImage.init(named: "")
-    }
-}
-
 // protocol中 需要用 associatedtype 来预设一个类型
-public protocol CIImageDownloaderProtocol {
+public protocol AXImageDownloaderProtocol {
     associatedtype type
-    var ci: type { get }
+    var ax: type { get }
 }
 
-extension CIImageDownloaderProtocol {
-    public var ci: CIImageKit<Self> {
+extension AXImageDownloaderProtocol {
+    public var ax: AXIImageKit<Self> {
         get {
-            return CIImageKit(self)
+            return AXIImageKit(self)
         }
     }
 }
 
-extension UIImageView: CIImageDownloaderProtocol {}
+extension AXIImageKit where AnyOne: UIImageView {
+    func setImage(url: URL, placeHolder: UIImage?) {
+        // 实现 下载图片并缓存、展示的逻辑
+        self.one.image = UIImage.init(named: "")
+    }
+}
 
+extension UIImageView: AXImageDownloaderProtocol {}
 
-func test1() {
-    
+extension AXIImageKit where AnyOne: UIButton {
+    func setImage(url: URL, placeHolder: UIImage?) {
+        // 实现 下载图片并缓存、展示的逻辑
+        self.one.imageView?.image = UIImage.init(named: "")
+    }
+}
+extension UIButton: AXImageDownloaderProtocol {}
+
+func test() {
     let image = UIImageView()
-    image.ci.setImage(url: URL.init(string: "https://www.manoboo.com")!, placeHolder: nil)
+    image.ax.setImage(url: URL.init(string: "https://www.manoboo.com")!, placeHolder: nil)
     
+    let btn = UIButton()
+    
+    btn.ax.setImage(url: URL.init(string: "https://www.manoboo.com")!, placeHolder: nil)
 }

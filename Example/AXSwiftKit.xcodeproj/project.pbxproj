@@ -15,14 +15,17 @@
 		215E1AF22637B94F0008037C /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215E1AF12637B94F0008037C /* DBManager.swift */; };
 		215E1AF62637B9710008037C /* DBStudent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215E1AF52637B9710008037C /* DBStudent.swift */; };
 		215E436525674D34002D68C6 /* pch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215E436425674D34002D68C6 /* pch.swift */; };
-		216C93C226621E630085F38E /* Test1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216C93C126621E630085F38E /* Test1.swift */; };
 		21876C0F2660CE330057A661 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21876C0E2660CE330057A661 /* Test.swift */; };
 		21876C112660D00D0057A661 /* Test2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21876C102660D00D0057A661 /* Test2.swift */; };
 		2189F8592567ADC30067A3D7 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2189F8582567ADC30067A3D7 /* UserInfo.swift */; };
 		2189F85F2567AECA0067A3D7 /* _01ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2189F85E2567AECA0067A3D7 /* _01ContentViewController.swift */; };
+		218B25562664CC19005C6388 /* _05RxSwiftVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218B25552664CC19005C6388 /* _05RxSwiftVC.swift */; };
+		218B25592664CD46005C6388 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218B25582664CD46005C6388 /* Operators.swift */; };
+		218B255B2664D785005C6388 /* _05RxSwiftVC2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218B255A2664D785005C6388 /* _05RxSwiftVC2.swift */; };
+		21E652402664B6CF00FFF528 /* _04ReaSwiftVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E6523F2664B6CF00FFF528 /* _04ReaSwiftVC.swift */; };
 		21EA1AC5258B3D1E007A14C4 /* _02View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EA1AC4258B3D1E007A14C4 /* _02View.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
-		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
+		607FACD81AFB9204008FA782 /* _01RootVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* _01RootVC.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
@@ -48,17 +51,20 @@
 		215E1AF12637B94F0008037C /* DBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
 		215E1AF52637B9710008037C /* DBStudent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBStudent.swift; sourceTree = "<group>"; };
 		215E436425674D34002D68C6 /* pch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pch.swift; sourceTree = "<group>"; };
-		216C93C126621E630085F38E /* Test1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test1.swift; sourceTree = "<group>"; };
 		21876C0E2660CE330057A661 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		21876C102660D00D0057A661 /* Test2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test2.swift; sourceTree = "<group>"; };
 		2189F8582567ADC30067A3D7 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		2189F85E2567AECA0067A3D7 /* _01ContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _01ContentViewController.swift; sourceTree = "<group>"; };
+		218B25552664CC19005C6388 /* _05RxSwiftVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _05RxSwiftVC.swift; sourceTree = "<group>"; };
+		218B25582664CD46005C6388 /* Operators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
+		218B255A2664D785005C6388 /* _05RxSwiftVC2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _05RxSwiftVC2.swift; sourceTree = "<group>"; };
+		21E6523F2664B6CF00FFF528 /* _04ReaSwiftVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _04ReaSwiftVC.swift; sourceTree = "<group>"; };
 		21EA1AC4258B3D1E007A14C4 /* _02View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _02View.swift; sourceTree = "<group>"; };
 		5366D14909F31C636A1BC4EA /* AXSwiftKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = AXSwiftKit.podspec; path = ../AXSwiftKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		607FACD01AFB9204008FA782 /* AXSwiftKit_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AXSwiftKit_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		607FACD71AFB9204008FA782 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		607FACD71AFB9204008FA782 /* _01RootVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _01RootVC.swift; sourceTree = "<group>"; };
 		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -114,6 +120,10 @@
 				2189F85E2567AECA0067A3D7 /* _01ContentViewController.swift */,
 				21EA1AC4258B3D1E007A14C4 /* _02View.swift */,
 				215E1AEC2637B8730008037C /* _03DBViewController.swift */,
+				21E6523F2664B6CF00FFF528 /* _04ReaSwiftVC.swift */,
+				218B25552664CC19005C6388 /* _05RxSwiftVC.swift */,
+				218B255A2664D785005C6388 /* _05RxSwiftVC2.swift */,
+				218B25582664CD46005C6388 /* Operators.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -124,7 +134,6 @@
 				2189F8582567ADC30067A3D7 /* UserInfo.swift */,
 				2156252E256E347A0010BAD8 /* Person.swift */,
 				21876C0E2660CE330057A661 /* Test.swift */,
-				216C93C126621E630085F38E /* Test1.swift */,
 				21876C102660D00D0057A661 /* Test2.swift */,
 			);
 			path = Model;
@@ -167,7 +176,7 @@
 				2189F8572567ADB50067A3D7 /* Model */,
 				2189F8552567AD9D0067A3D7 /* Classes */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
-				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				607FACD71AFB9204008FA782 /* _01RootVC.swift */,
 				215E436425674D34002D68C6 /* pch.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
@@ -339,6 +348,9 @@
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactiveCocoa/ReactiveCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactiveSwift/ReactiveSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
@@ -350,6 +362,9 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
@@ -388,18 +403,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				2156252F256E347A0010BAD8 /* Person.swift in Sources */,
+				218B25562664CC19005C6388 /* _05RxSwiftVC.swift in Sources */,
 				2189F8592567ADC30067A3D7 /* UserInfo.swift in Sources */,
-				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
-				216C93C226621E630085F38E /* Test1.swift in Sources */,
+				607FACD81AFB9204008FA782 /* _01RootVC.swift in Sources */,
 				215E1AF62637B9710008037C /* DBStudent.swift in Sources */,
 				21876C112660D00D0057A661 /* Test2.swift in Sources */,
+				218B255B2664D785005C6388 /* _05RxSwiftVC2.swift in Sources */,
 				2142A6882589D6E3002AA531 /* _00BaseViewController.swift in Sources */,
 				21876C0F2660CE330057A661 /* Test.swift in Sources */,
 				21EA1AC5258B3D1E007A14C4 /* _02View.swift in Sources */,
+				218B25592664CD46005C6388 /* Operators.swift in Sources */,
 				215E1AF22637B94F0008037C /* DBManager.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				2189F85F2567AECA0067A3D7 /* _01ContentViewController.swift in Sources */,
 				215E436525674D34002D68C6 /* pch.swift in Sources */,
+				21E652402664B6CF00FFF528 /* _04ReaSwiftVC.swift in Sources */,
 				215E1AED2637B8730008037C /* _03DBViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

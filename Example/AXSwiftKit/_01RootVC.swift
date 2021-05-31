@@ -12,7 +12,7 @@ import AXSwiftKit
 
 //typealias ActionHandler = (_ index:Int) -> Void
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class _01RootVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     //    var actionHandler : ActionHandler?
     
@@ -91,6 +91,30 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             },
         ],
         
+        [
+            "index": 04,
+            "title": "_04ReaSwiftVC",
+            "action": {(index : Int)->Void in
+                let vc = _04ReaSwiftVC.init()
+                self.navigationController?.pushViewController(vc, animated: true)
+            },
+        ],
+        [
+            "index": 04,
+            "title": "_05RxSwiftVC",
+            "action": {(index : Int)->Void in
+                let vc = _05RxSwiftVC.init()
+                self.navigationController?.pushViewController(vc, animated: true)
+            },
+        ],
+        [
+            "index": 04,
+            "title": "_05RxSwiftVC2",
+            "action": {(index : Int)->Void in
+                let vc = _05RxSwiftVC2.init()
+                self.navigationController?.pushViewController(vc, animated: true)
+            },
+        ],
         
         
         

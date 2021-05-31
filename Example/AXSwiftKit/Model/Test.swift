@@ -49,6 +49,7 @@ extension AXImageDownloaderProtocol {
 
 
 extension UIImageView: AXImageDownloaderProtocol {}
+/// AnyOne:是 UIImageView类型
 extension AXIImageKit where AnyOne: UIImageView {
     func setImage(url: URL, placeHolder: UIImage?) {
         // 实现 下载图片并缓存、展示的逻辑

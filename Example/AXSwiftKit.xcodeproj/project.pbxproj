@@ -15,6 +15,7 @@
 		215E1AF22637B94F0008037C /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215E1AF12637B94F0008037C /* DBManager.swift */; };
 		215E1AF62637B9710008037C /* DBStudent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215E1AF52637B9710008037C /* DBStudent.swift */; };
 		215E436525674D34002D68C6 /* pch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215E436425674D34002D68C6 /* pch.swift */; };
+		216C93CC266504F20085F38E /* Test3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216C93CB266504F20085F38E /* Test3.swift */; };
 		21876C0F2660CE330057A661 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21876C0E2660CE330057A661 /* Test.swift */; };
 		21876C112660D00D0057A661 /* Test2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21876C102660D00D0057A661 /* Test2.swift */; };
 		2189F8592567ADC30067A3D7 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2189F8582567ADC30067A3D7 /* UserInfo.swift */; };
@@ -51,6 +52,7 @@
 		215E1AF12637B94F0008037C /* DBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
 		215E1AF52637B9710008037C /* DBStudent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBStudent.swift; sourceTree = "<group>"; };
 		215E436425674D34002D68C6 /* pch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pch.swift; sourceTree = "<group>"; };
+		216C93CB266504F20085F38E /* Test3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test3.swift; sourceTree = "<group>"; };
 		21876C0E2660CE330057A661 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		21876C102660D00D0057A661 /* Test2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test2.swift; sourceTree = "<group>"; };
 		2189F8582567ADC30067A3D7 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 				2156252E256E347A0010BAD8 /* Person.swift */,
 				21876C0E2660CE330057A661 /* Test.swift */,
 				21876C102660D00D0057A661 /* Test2.swift */,
+				216C93CB266504F20085F38E /* Test3.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -411,6 +414,7 @@
 				218B255B2664D785005C6388 /* _05RxSwiftVC2.swift in Sources */,
 				2142A6882589D6E3002AA531 /* _00BaseViewController.swift in Sources */,
 				21876C0F2660CE330057A661 /* Test.swift in Sources */,
+				216C93CC266504F20085F38E /* Test3.swift in Sources */,
 				21EA1AC5258B3D1E007A14C4 /* _02View.swift in Sources */,
 				218B25592664CD46005C6388 /* Operators.swift in Sources */,
 				215E1AF22637B94F0008037C /* DBManager.swift in Sources */,

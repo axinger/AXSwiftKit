@@ -8,9 +8,12 @@
 import UIKit
 
 
-extension UIButton: AXAnyBaseProtocol {}
-
-extension AXAnyBase where Base:UIButton {
+extension AXAnyBase where Element:UIButton {
     
     
 }
+
+//extension AXAnyBase where Element == Equatable {
+//    
+//    
+//}

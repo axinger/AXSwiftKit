@@ -22,7 +22,7 @@ class _05RxSwiftVC2: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         setupTableViewRX()
     }
     
@@ -37,29 +37,29 @@ class _05RxSwiftVC2: UITableViewController {
     
     /// tableView -- RX
     func setupTableViewRX() {
-       
-//        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
-//        tableView.delegate = nil;
-//        tableView.dataSource = nil;
+        
+        //        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        //        tableView.delegate = nil;
+        //        tableView.dataSource = nil;
         
         let items = Observable.just(
             (0..<20).map { "\($0)" }
         )
-
+        
         items
             .bind(to: tableView.rx.items(cellIdentifier: "Cell", cellType: UITableViewCell.self)) { (row, element, cell) in
                 cell.textLabel?.text = "\(element) @ row \(row)"
             }
             .disposed(by: disposeBag)
-
-
+        
+        
         tableView.rx
             .modelSelected(String.self)
             .subscribe(onNext:  { value in
-               print("Tapped `\(value)`")
+                print("Tapped `\(value)`")
             })
             .disposed(by: disposeBag)
-
+        
         tableView.rx
             .itemAccessoryButtonTapped
             .subscribe(onNext: { indexPath in
@@ -74,11 +74,11 @@ class _05RxSwiftVC2: UITableViewController {
             .setDelegate(self)
             .disposed(by: disposeBag)
         
-//        tableView.rx
-//            .setDataSource(self)
-//            .disposed(by: disposeBag)
+        //        tableView.rx
+        //            .setDataSource(self)
+        //            .disposed(by: disposeBag)
         
         
     }
-
+    
 }

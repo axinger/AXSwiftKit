@@ -127,6 +127,11 @@ class _01RootVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 //                UIButton().ax.encoding()
 //                AXPrint("打印=\(str)")
                 AXLog.debug("打印=\(str)")
+               let dict = ["1":"1"]
+                
+                let arr = [1,2] as Array<Any>
+                arr.ax.encoding();
+                
             },
         ],
         [

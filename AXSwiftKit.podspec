@@ -30,7 +30,10 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '10.0'
 
-  s.source_files = 'AXSwiftKit/Classes/*.swift'
+  s.subspec 'Core' do |ss|
+      ss.source_files = 'AXSwiftKit/Classes/*.swift'
+  end
+  
   
   # s.resource_bundles = {
   #   'AXSwiftKit' => ['AXSwiftKit/Assets/*.png']

@@ -18,5 +18,10 @@
   "platforms": {
     "ios": "10.0"
   },
-  "source_files": "AXSwiftKit/Classes/*.swift"
+  "subspecs": [
+    {
+      "name": "Core",
+      "source_files": "AXSwiftKit/Classes/*.swift"
+    }
+  ]
 }

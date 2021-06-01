@@ -31,6 +31,9 @@ class _01RootVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }()
     override func viewDidLoad() {
         super.viewDidLoad()
+        AXLog.debug("自定义打印type=\(type(of: self))")
+        AXLog.debug("自定义打印=\(self)")
+        
         title = "Home"
         view.addSubview(tableView)
         tableView.snp.remakeConstraints { (make) in
@@ -120,9 +123,10 @@ class _01RootVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             "index": 04,
             "title": "中文编码",
             "action": {(index : Int)->Void in
-                "https://www.google.com/search?q=成都市".ax.encoding();
+              let str = "https://www.google.com/search?q=成都市".ax.encoding();
 //                UIButton().ax.encoding()
-                
+//                AXPrint("打印=\(str)")
+                AXLog.debug("打印=\(str)")
             },
         ],
         [

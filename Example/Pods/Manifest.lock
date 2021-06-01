@@ -1,6 +1,6 @@
 PODS:
   - Alamofire (4.9.1)
-  - AXSwiftKit (0.1.0)
+  - AXSwiftKit (0.1.1)
   - GRDB.swift (5.7.4):
     - GRDB.swift/standard (= 5.7.4)
   - GRDB.swift/standard (5.7.4)
@@ -48,7 +48,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
-  AXSwiftKit: 9796197fae97e8d95bca34369b0f13bc3dbfeec8
+  AXSwiftKit: 72b668397d44f187bccb4dd0f1a203063b13ae63
   GRDB.swift: 2064e726141f130d0b8bd819b29086f2b1157597
   ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
   ReactiveCocoa: 083ae559e6f588ce519cab412ea119b431c26a24

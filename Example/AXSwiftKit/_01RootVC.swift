@@ -116,7 +116,23 @@ class _01RootVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             },
         ],
         
-        
+        [
+            "index": 04,
+            "title": "中文编码",
+            "action": {(index : Int)->Void in
+                "https://www.google.com/search?q=成都市".ax.encoding();
+//                UIButton().ax.encoding()
+                
+            },
+        ],
+        [
+            "index": 04,
+            "title": "中文解码",
+            "action": {(index : Int)->Void in
+                let vc = _05RxSwiftVC2.init()
+                self.navigationController?.pushViewController(vc, animated: true)
+            },
+        ],
         
     ]
 }

@@ -41,9 +41,9 @@ class _05RxSwiftVC: _00BaseViewController {
 //            print(change ?? "helloword")
 //        }).disposed(by: disposeBag)
         
-//        self.rx.observe(String.self, "name").map { (val) in
-//            print(val!)
-//        }
+        self.rx.observe(String.self, "name").map { (val) in
+            print(val!)
+        }
         
         containerView.addSubview(phoneLabel)
         phoneLabel.snp.makeConstraints { make in

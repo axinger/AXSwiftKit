@@ -21,7 +21,16 @@
   "subspecs": [
     {
       "name": "Core",
-      "source_files": "AXSwiftKit/Classes/*.swift"
+      "source_files": "AXSwiftKit/Core/*.swift"
+    },
+    {
+      "name": "Extension",
+      "dependencies": {
+        "AXSwiftKit/Core": [
+
+        ]
+      },
+      "source_files": "AXSwiftKit/Extension/*.swift"
     }
   ]
 }

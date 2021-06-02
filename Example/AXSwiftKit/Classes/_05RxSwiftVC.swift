@@ -9,51 +9,78 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import AXSwiftKit
 
 class _05RxSwiftVC: _00BaseViewController {
     
-    lazy var phoneLabel:UILabel = {
-        let label = UILabel()
-        label.backgroundColor = UIColor.orange
-        return label
-    }()
+    var address: String = "" {
+        didSet {
+            addressSubject.onNext(address)
+        }
+    }
+    var addressSubject = PublishSubject<String>()
     
-    lazy var textFiled:UITextField = {
-        let tf = UITextField()
-        tf.placeholder = "请输入用户名"
-        tf.backgroundColor = UIColor.purple
-        return tf
-    }()
     
-//    var name:String? = ""
-//    var name:String? = ""
-//    var name : BehaviorRelay<String?>
-//    let name = PublishSubject<String>()
+    @objc dynamic var message = "message"
     
-    let name = BehaviorSubject(value: "")
-    
+    // 在RxSwift中，订阅者都会返回一个Disposable（默认是Disposables），以便使用者可以在后续的操作中，取消此次订阅。
     let disposeBag = DisposeBag()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "rx基本用法"
+        test_event()
+        test_tf()
+        test_kvo()
+        self._lastBottomConstraints();
+    }
+    
+    
+    deinit {
+        AXLog.debug("消失...")
+    }
+    
+    //MARK: - 事件
+    func test_event() {
         
-//        self.rx.observeWeakly(String.self, "name").subscribe(onNext: { (change) in
-//            print(change ?? "helloword")
-//        }).disposed(by: disposeBag)
         
-        self.rx.observe(String.self, "name").map { (val) in
-            print(val!)
+        do {
+            
+            let btn = UIButton()
+            containerView.addSubview(btn)
+            btn.backgroundColor = UIColor.blue
+            btn.setTitle("btn.rx.tap", for: .normal)
+            
+            btn.snp.makeConstraints { make in
+                make.top.equalTo(self.lastBottom).offset(20)
+                make.left.equalToSuperview().offset(10)
+                make.right.equalToSuperview().offset(-10)
+            }
+            
+            btn.rx.tap
+                .subscribe(onNext: { [unowned self] x in
+                    
+                    print("按钮点击事件=\(title ?? "")")
+                })
+                .disposed(by: disposeBag)
+            
+            self.lastBottom = btn.snp.bottom
         }
+    }
+    
+    //MARK: - UITextField 双向绑定
+    func test_tf() {
         
-        containerView.addSubview(phoneLabel)
-        phoneLabel.snp.makeConstraints { make in
-            make.top.equalTo(self.lastBottom).offset(20)
-            make.left.equalToSuperview().offset(10)
-            make.right.equalToSuperview().offset(-10)
-            make.height.equalTo(50)
-        }
+        _ = _label(title: "UITextField.text 赋值也无效")
+        let label:UILabel = self._label(title: "UITextField变化")
+        let numLabel:UILabel = _label(title: "UITextField变化")
         
-        lastBottom = phoneLabel.snp.bottom
+        let name:BehaviorRelay<String> = BehaviorRelay(value: "")
+        
+        let textFiled = UITextField()
+        textFiled.placeholder = "请输入用户名"
+        textFiled.backgroundColor = .orange
         
         containerView.addSubview(textFiled)
         textFiled.snp.makeConstraints { make in
@@ -63,67 +90,94 @@ class _05RxSwiftVC: _00BaseViewController {
         }
         lastBottom = textFiled.snp.bottom
         
-        self.textFiled.rx.text.orEmpty.changed.subscribe(onNext: { (text) in
-            print("监听到了 - \(text)")
+        
+        textFiled.rx.text.orEmpty.changed.subscribe(onNext: { (text) in
+            print("textFiled=\(text)")
         }).disposed(by: disposeBag)
         
-        // 实现 view -绑定-> model
-                
-        self.textFiled.rx.text.orEmpty.bind(to: self.name).disposed(by: self.disposeBag)
-        
-        
-//        textFiled.rx.text.bind(to: self.name).disposed(by: disposeBag)
-//        (textFiled.rx.text <-> self.name).disposed(by: disposeBag)
-        
-//        phoneLabel.rx.text.bind(to: self.name).disposed(by: disposeBag)
-        
-        
-//        textFiled.rx.text.orEmpty.bind(to:self.name).disposed(by: disposeBag)
-        
-//        textFiled.rx.text.orEmpty.bind(to: self.name).disposed(by: disposeBag)
-        
-//        textFiled.rx.text.bind(to: self.name).disposed(by: disposeBag)
-        
-        _p00Button(title: "name值") { [self] in
-           
-            print( try!self.name.value())
-        }
-        
-        _p00Button(title: "name赋值") { [self] in
+        //在用户名输入框中按下 return 键
+        textFiled.rx.controlEvent(.editingDidEndOnExit).subscribe(onNext: {
             
+            textFiled.becomeFirstResponder()
+        }).disposed(by: disposeBag)
+        
+        //在密码输入框中按下 return 键
+        textFiled.rx.controlEvent(.editingDidEndOnExit).subscribe(onNext: {
             
+            textFiled.resignFirstResponder()
+        }).disposed(by: disposeBag)
+        
+        /**
+         .orEmpty 可以将 String? 类型的 ControlProperty 转成 String，省得我们再去解包
+         */
+        _ = textFiled.rx.textInput <->  name
+        _ = textFiled.rx.text.orEmpty <->  name
+        
+        name.bind(to: label.rx.text).disposed(by: disposeBag)
+        
+        //        name.asDriver().map{ "当前字数：\($0.count)" }
+        //                    .drive(label.rx.text)
+        //                    .disposed(by: disposeBag)
+        
+        name.map { (val) in
+            return "字数:\(val.count)"
+        }.bind(to: numLabel.rx.text).disposed(by: disposeBag)
+        
+        
+        name.asObservable()
+            .subscribe(onNext: { x in
+                print("textFiled绑定=\(x)")
+            }) .disposed(by: disposeBag)
+        
+        _ =  _p00Button(title: "textFiled赋值") {
+            
+            textFiled.text = "textFiled赋值\(Date())"
         }
         
-        _p00Button(title: "phoneLabel赋值") { [self] in
-            phoneLabel.text = "我是phoneLabel赋值"
+        _=_p00Button(title: "label赋值") {
+            label.text = "label赋值\(Date())"
         }
         
-        
-        _p00Button(title: "phoneTF赋值") { [self] in
-            textFiled.text = "我是textFiled赋值"
+        _ = _p00Button(title: "name-get值") {
+            
+            print(name.value)
         }
         
-        
-        //将用户名与textField做双向绑定
-        //               _ =  self.phoneTF.rx.textInput <->  self.phoneText
-        
-        //将用户信息绑定到label上
-        //        phoneText.userinfo.bind(to: phoneLabel.rx.text).disposed(by: disposeBag)
-        
-        self._lastBottomConstraints();
-        
-        
+        _ =  _p00Button(title: "name-set") {
+            
+            name.accept("name-set\(Date())")
+        }
     }
     
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
+    //MARK: - kvo
+    func test_kvo(){
+        
+        self.addressSubject.asObservable().subscribe(onNext: { val in
+            
+            let str:String = val
+            print("addressSubject=\(val),\(str)")
+        }).disposed(by: disposeBag)
+        
+        self.addressSubject.subscribe(onNext: { val in
+            
+            let str:String = val
+            print("addressSubject=\(val),\(str)")
+        }).disposed(by: disposeBag)
+        
+        
+        _ = _p00Button(title: "address赋值") {[unowned self] in
+            address = "\(Date())"
+        }
+        
+        
+        self.rx.observeWeakly(String.self, "message")
+            .subscribe(onNext: { (value) in
+                print(value ?? "")
+                
+            }).disposed(by: disposeBag)
+        
+        _ = _p00Button(title: "message赋值,@objc修饰") {[unowned self] in
+            message = "\(Date.init())"
+        }
+    }
 }

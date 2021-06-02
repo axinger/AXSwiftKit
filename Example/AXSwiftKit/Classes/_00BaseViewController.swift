@@ -11,7 +11,7 @@ import SnapKit
 import SwiftyJSON
 
 class _00BaseViewController: UIViewController {
-
+    
     lazy var containerView = UIView()
     lazy var scrollView: UIScrollView = {
         let scrollView = UIScrollView()
@@ -37,7 +37,7 @@ class _00BaseViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         title = "00Base"
         view.backgroundColor = UIColor.white
         view.addSubview(scrollView)
@@ -53,7 +53,7 @@ class _00BaseViewController: UIViewController {
     }
     
     
-    func _p00Button(title: String?, handler: (() -> Void)?) -> Void {
+    func _p00Button(title: String?, handler: (() -> Void)?) -> UIButton {
         var title = title
         if (title?.count ?? 0) == 0 {
             title = "title"
@@ -75,6 +75,29 @@ class _00BaseViewController: UIViewController {
             handler?()
         }
         self.lastBottom = btn.snp.bottom
+        
+        return btn;
     }
-
+    
+    func _label(title: String?) -> UILabel {
+        var title = title
+        if (title?.count ?? 0) == 0 {
+            title = "title"
+        }
+        let label = UILabel()
+        containerView.addSubview(label)
+        label.backgroundColor = UIColor.blue
+        label.text = title
+        
+        label.snp.makeConstraints { make in
+            make.top.equalTo(self.lastBottom).offset(20)
+            make.left.equalToSuperview().offset(10)
+            make.right.equalToSuperview().offset(-10)
+        }
+        
+        self.lastBottom = label.snp.bottom
+        
+        return label;
+    }
+    
 }

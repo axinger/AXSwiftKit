@@ -33,6 +33,15 @@ class _01RootVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         super.viewDidLoad()
         AXLog.debug("自定义打印type=\(type(of: self))")
         AXLog.debug("自定义打印=\(self)")
+        //Swift类型自动被模块名设置了名称空间，
+        //所以你不需要加一个类的前缀。如果两个来自不同模块的命名冲突了，你可以附加一个模块名到类型命名的前面来消除冲突。
+        AXSwiftKit.AXLog.debug("名称空间")
+        
+        //获取导航栏背景视图
+//       let barImageView = self.navigationController?.navigationBar.subviews.first
+//        barImageView?.backgroundColor = .orange
+        
+        self.navigationController?.navigationBar.barTintColor = .orange
         
         title = "Home"
         view.addSubview(tableView)
@@ -104,7 +113,7 @@ class _01RootVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         ],
         [
             "index": 04,
-            "title": "_05RxSwiftVC",
+            "title": "rx基础用法",
             "action": {(index : Int)->Void in
                 let vc = _05RxSwiftVC.init()
                 self.navigationController?.pushViewController(vc, animated: true)
@@ -118,30 +127,15 @@ class _01RootVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                 self.navigationController?.pushViewController(vc, animated: true)
             },
         ],
-        
         [
             "index": 04,
-            "title": "中文编码",
+            "title": "_05RxSwiftVC3",
             "action": {(index : Int)->Void in
-              let str = "https://www.google.com/search?q=成都市".ax.encoding();
-//                UIButton().ax.encoding()
-//                AXPrint("打印=\(str)")
-                AXLog.debug("打印=\(str)")
-               let dict = ["1":"1"]
-                
-                let arr = [1,2] as Array<Any>
-                arr.ax.encoding();
-                
-            },
-        ],
-        [
-            "index": 04,
-            "title": "中文解码",
-            "action": {(index : Int)->Void in
-                let vc = _05RxSwiftVC2.init()
+                let vc = _05RxSwiftVC3.init()
                 self.navigationController?.pushViewController(vc, animated: true)
             },
         ],
+        
         
     ]
 }

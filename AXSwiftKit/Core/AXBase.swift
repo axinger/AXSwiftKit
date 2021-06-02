@@ -7,17 +7,18 @@
 
 import Foundation
 
-public struct AXAnyBase<Element> {
+public struct AXAnyBase<Base> {
     
     /// 泛型的实例对象
-    public let el: Element
-    public init(_ el: Element) {
-        self.el = el
+    public let base: Base
+    public init(_ base: Base) {
+        self.base = base
     }
 }
 
 
 public protocol AXAnyBaseProtocol {
+    
     // protocol中 需要用 associatedtype 来预设一个类型
     associatedtype T
     
@@ -28,21 +29,22 @@ public protocol AXAnyBaseProtocol {
 }
 
 extension AXAnyBaseProtocol {
+    
     public var ax: AXAnyBase<Self> {
-        //        return AXAnyBase<Self>(self)
-        
         get { AXSwiftKit.AXAnyBase<Self>(self) }
     }
     
     public static var ax: AXAnyBase<Self>.Type {
-        //        return AXAnyBase<Self>.self
         get { AXAnyBase<Self>.self }
     }
 }
 
 extension String: AXAnyBaseProtocol {}
+
 extension Dictionary: AXAnyBaseProtocol {}
 extension Array: AXAnyBaseProtocol {}
+extension Set: AXAnyBaseProtocol {}
+
 
 
 extension AnyIterator: AXAnyBaseProtocol {}

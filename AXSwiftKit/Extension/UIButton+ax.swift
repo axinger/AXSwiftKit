@@ -8,7 +8,7 @@
 import UIKit
 
 
-extension AXAnyBase where Element:UIButton {
+extension AXAnyBase where Base:UIButton {
     
     
 }

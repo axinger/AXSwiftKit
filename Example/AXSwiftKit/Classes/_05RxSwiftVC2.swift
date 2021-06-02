@@ -39,8 +39,8 @@ class _05RxSwiftVC2: UITableViewController {
     func setupTableViewRX() {
         
         //        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
-        //        tableView.delegate = nil;
-        //        tableView.dataSource = nil;
+                tableView.delegate = nil;
+                tableView.dataSource = nil;
         
         let items = Observable.just(
             (0..<20).map { "\($0)" }
@@ -70,9 +70,9 @@ class _05RxSwiftVC2: UITableViewController {
         
         
         
-        tableView.rx
-            .setDelegate(self)
-            .disposed(by: disposeBag)
+//        tableView.rx
+//            .setDelegate(self)
+//            .disposed(by: disposeBag)
         
         //        tableView.rx
         //            .setDataSource(self)

@@ -5,7 +5,7 @@
 //  Created by 小星星吃KFC on 2020/11/20.
 //  Copyright © 2020 CocoaPods. All rights reserved.
 //
-
+/// decode生成的对象不是单例对象
 import UIKit
 /// Codable 属性用? 避免json中无字段,而奔溃
 final class UserInfo: Codable {
@@ -13,8 +13,7 @@ final class UserInfo: Codable {
     ///支持懒加载, 线程安全
     //    static let shared = UserInfo(name:"空", age: 0, sex: .other)
     static let shared: UserInfo = UserInfo()
-    private init() {
-    }
+    private init() {}
     
     enum Sex: Int, Codable {
         case male = 1

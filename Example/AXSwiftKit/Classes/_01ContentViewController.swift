@@ -95,16 +95,16 @@ class _01ContentViewController: _00BaseViewController {
         _test03_1()
         _test04()
         
-        _p00Button(title: "语音") {
+        _ = _p00Button(title: "语音") {
             
-                   let synthsizer = AVSpeechSynthesizer.init()
-                   let utterance = AVSpeechUtterance.init(string: "支付宝到账1000元")
-//                   utterance.voice = AVSpeechSynthesisVoice.init(language: "zh-CN")
-                   utterance.rate = 0.52
-                   synthsizer.speak(utterance)
+            let synthsizer = AVSpeechSynthesizer.init()
+            let utterance = AVSpeechUtterance.init(string: "支付宝到账1000元")
+            //                   utterance.voice = AVSpeechSynthesisVoice.init(language: "zh-CN")
+            utterance.rate = 0.52
+            synthsizer.speak(utterance)
         }
         
-        _p00Button(title: "转义字符") {
+        _ = _p00Button(title: "转义字符") {
             print("\0 (空字符)")
             print("\\ (反斜线)")
             print("\t (⽔水平制表符)")
@@ -121,7 +121,7 @@ class _01ContentViewController: _00BaseViewController {
             print("Line 1 \\nLine 2")
             
         }
-        _p00Button(title: "String") {
+        _ = _p00Button(title: "String") {
             let str = ""
             print("str.isEmpty \(str.isEmpty)")
             
@@ -143,7 +143,7 @@ class _01ContentViewController: _00BaseViewController {
             // 打印输出“the number of characters in café is 4”
             
         }
-        _p00Button(title: "String值传递") {
+        _ = _p00Button(title: "String值传递") {
             var str1 : String = "str1"
             
             
@@ -156,7 +156,7 @@ class _01ContentViewController: _00BaseViewController {
             
             
         }
-        _p00Button(title: "class struct") {
+        _ = _p00Button(title: "class struct") {
             print("==================自定义 class 值传递比较==============")
             let p11 = PersonClass()
             p11.name1 = "n1"
@@ -171,10 +171,12 @@ class _01ContentViewController: _00BaseViewController {
             /// struct可直接在构造函数中初始化property
             /// class不可直接在构造函数中初始化property
             var p21 = PersonStruct(name1: "jim")
-            /// 初始化
-            var p211 = PersonStruct(name1: "jim",name2: "tom")
-            /// 初始化
-            var p212 = PersonStruct(name2: "tom")
+            
+            let p211 = PersonStruct(name1: "jim",name2: "tom")
+            print(p211)
+            
+            let p212 = PersonStruct(name2: "tom")
+            print(p212)
             
             p21.name1 = "n21"
             
@@ -188,7 +190,7 @@ class _01ContentViewController: _00BaseViewController {
             print("打印地址self = \(Unmanaged.passUnretained(self).toOpaque())")
             
         }
-        _p00Button(title: "集合") {
+        _ = _p00Button(title: "集合") {
             //            var arr = Array<Int>()
             var arr = [Int]()
             arr.append(1)
@@ -199,13 +201,13 @@ class _01ContentViewController: _00BaseViewController {
             print("arr = \(arr)")
             print("arr1 = \(arr1)")
             
-            var threeDoubles = Array(repeating: 0.0, count: 3)
+            let threeDoubles = Array(repeating: 0.0, count: 3)
             print("threeDoubles \(threeDoubles)")
             // threeDoubles 是⼀一种 [Double] 数组，等价于 [0.0, 0.0, 0.0]
             
         }
         
-        _p00Button(title: "集合") {
+        _ = _p00Button(title: "集合") {
             
             struct TimesTable {
                 var age: Int = 0
@@ -230,7 +232,7 @@ class _01ContentViewController: _00BaseViewController {
             
         }
         
-        _p00Button(title: "log") {
+        _ = _p00Button(title: "log") {
             
             // 2. 创建Logger实例
             if #available(iOS 14.0, *) {
@@ -243,11 +245,11 @@ class _01ContentViewController: _00BaseViewController {
                 logger.log(level: .error, "test")
                 logger.log(level: .fault, "test")
             } 
-
+            
             
         }
         
-       
+        
         
         
         containerView.snp.makeConstraints { make in
@@ -256,13 +258,19 @@ class _01ContentViewController: _00BaseViewController {
     }
     
     func _test01() -> Void{
-        _p00Button(title: "单例解析") {
+        _ = _p00Button(title: "单例解析") {
             
-            let map :[String : Any] = ["name":"jim","age":10,"sex":1]
+            //            let map :[String : Any] = ["name":"jim","age":10,"sex":1]
+            //
+            //            guard let data = try? JSONSerialization.data(withJSONObject: map as Any, options: .prettyPrinted) else {
+            //                return
+            //            }
+            let jsonData = """
+             {"name":"jim","age":10,"sex":1}
+            """
+            let data = jsonData.data(using:.utf8)!;
             
-            guard let data = try? JSONSerialization.data(withJSONObject: map as Any, options: .prettyPrinted) else {
-                return
-            }
+            
             let user :UserInfo = try! JSONDecoder().decode(UserInfo.self, from: data);
             print("单例对象 user = \(user.name ?? "name null")")
             print("单例对象 switch = \(String(describing: user.switch))")
@@ -278,16 +286,16 @@ class _01ContentViewController: _00BaseViewController {
     }
     
     func _test02() -> Void{
-        _p00Button( title: "按钮2") {
+        _ =  _p00Button( title: "按钮2") {
             print("按钮=====")
         }
-        _p00Button(title: "按钮3", handler: nil)
+        _ =  _p00Button(title: "按钮3", handler: nil)
         
     }
     
     func _test03() -> Void{
         
-        _p00Button(title: "枚举") {
+        _ = _p00Button(title: "枚举") {
             enum Direction {
                 case north
                 case south
@@ -358,16 +366,16 @@ class _01ContentViewController: _00BaseViewController {
     
     func _test03_1() -> Void{
         
-        _p00Button(title: "枚举-关联值") {
+        _ = _p00Button(title: "枚举-关联值") {
             
             enum Score {
                 case points(Int)
                 case grade(Character)
             }
-
+            
             var score = Score.points(96)
             score = .grade("A")
-
+            
             switch score {
             case let .points(i):
                 print(i, "Points")
@@ -376,13 +384,13 @@ class _01ContentViewController: _00BaseViewController {
             }
             
             
-//            guard let number = Int("123A") else {
-//                print("字符串转换整数失败")
-////                return;
-//            }
-//            print("字符串转换整数成功: \(number)")
+            //            guard let number = Int("123A") else {
+            //                print("字符串转换整数失败")
+            ////                return;
+            //            }
+            //            print("字符串转换整数成功: \(number)")
             
-
+            
             let number2 = Int("123A");
             
             print("字符串转换整数成功: \(number2 ?? 0)")
@@ -390,7 +398,7 @@ class _01ContentViewController: _00BaseViewController {
     }
     
     func _test04() -> Void{
-        _p00Button(title: "json解析") {
+        _ = _p00Button(title: "json解析") {
             
             let path = Bundle.main.path(forResource: "test", ofType: "json");
             if ( path?.count ?? 0 == 0){
@@ -451,8 +459,8 @@ class _01ContentViewController: _00BaseViewController {
     }
     
     deinit {
-   // 执⾏行行析构过程
+        // 执⾏行行析构过程
         print("被释放了.....")
-   }
-
+    }
+    
 }

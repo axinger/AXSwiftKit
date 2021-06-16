@@ -26,6 +26,10 @@ target 'AXSwiftKit_Example' do
   #  pod 'LookinServer', :configurations => ['Debug']
   
   pod 'GRDB.swift', '~> 5.7.4'
+  
+  # 动画
+  pod 'Hero'
+  
 end
 
 post_install do |installer|

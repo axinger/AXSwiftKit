@@ -77,7 +77,9 @@ class _01RootVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     
     // TODO: - AAAA
-    func test() -> Void {
+    func test() ->Int {
+        AXLog.debug("UI测试_test")
+        return 1
         
     }
 

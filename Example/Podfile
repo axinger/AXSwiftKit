@@ -8,9 +8,7 @@ target 'AXSwiftKit_Example' do
   pod 'AXSwiftKit', :path => '../'
   # 网络请求AFN swift版本
   pod 'Alamofire'
-  
   pod 'SnapKit', '~> 5.0.0'
-  
   pod 'ReactiveSwift', '~> 6.1'
   pod 'ReactiveCocoa', '~> 10.1'
   #RxSwift-拓展RxCocoa
@@ -19,20 +17,17 @@ target 'AXSwiftKit_Example' do
   # JSON 连续取值
   pod 'SwiftyJSON', '~> 4.0'
   # json > model
-  pod 'ObjectMapper'
-  
+#  pod 'ObjectMapper'
   # 测试工具
   #  pod 'MLeaksFinder'
   #  pod 'LookinServer', :configurations => ['Debug']
-  
   pod 'GRDB.swift', '~> 5.7.4'
-  
   # 动画
   pod 'Hero'
+  pod 'SwiftDate'
   
   target 'AXSwiftKit_Tests' do
       inherit! :search_paths
-
       pod 'Quick'
       pod 'Nimble'
       pod 'FBSnapshotTestCase'

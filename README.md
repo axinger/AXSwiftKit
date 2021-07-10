@@ -51,7 +51,7 @@ extension  CusProtocol where Self:UIView {
 
 ```
 ## 缺省参数
-```
+```swift
 func test1(name: String, lowercase: Bool = true)  {
     
     print(name,lowercase)
@@ -59,6 +59,17 @@ func test1(name: String, lowercase: Bool = true)  {
 
 test1(name: "", lowercase: true)
 test1(name: "")
+
+/// 参数默认值
+func show(name : String = "jim") {
+    
+    print("show=\(name)")
+    
+}
+show()
+show(name: "tom")
+
+
 ```
 
 ## 弱引用

@@ -10,6 +10,12 @@ import Foundation
 /// 每个属性都需要可选类型(?)接收，否则，若没有该属性，解析失败;
 /// 每个属性的类型都需要准确，否则解析失败;
 
+struct Person2: Decodable {
+    @Default<String.Unknown> var name: String
+    @Default<String.Unnamed> var name2: String
+    @Default<Int> var age: Int
+}
+
 struct Person: Codable {
     var name :String?
     var age :Int?

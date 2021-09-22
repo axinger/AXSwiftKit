@@ -9,10 +9,10 @@
 // import ReactiveCocoa
 
 import UIKit
-import SwiftyJSON
+//import SwiftyJSON
 import os
 import AVKit
-import AXSwiftKit
+//import AXSwiftKit
 class PersonClass: Equatable {
     static func == (lhs: PersonClass, rhs: PersonClass) -> Bool {
         return lhs.name1 == rhs.name1 && lhs.name2 == rhs.name2

@@ -7,9 +7,10 @@
 //
 
 import UIKit
-import SnapKit
-import SwiftyJSON
-
+//import SnapKit
+//import SwiftyJSON
+import ReactiveSwift
+import ReactiveCocoa
 class _00BaseViewController: UIViewController {
     
     lazy var containerView = UIView()
